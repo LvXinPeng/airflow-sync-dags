@@ -16,7 +16,7 @@ args = {
 dag = DAG(
     dag_id=dag_name,
     default_args=args,
-    schedule_interval='1/4 * * * *'
+    schedule_interval='1/6 * * * *'
 )
 
 git_sync_dags = BashOperator(
