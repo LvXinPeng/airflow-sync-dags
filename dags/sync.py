@@ -19,7 +19,6 @@ dag = DAG(
     schedule_interval='1/2 * * * *'
 )
 
-
 git_sync_dags = BashOperator(
     task_id='git_sync_dags',
 	bash_command="cd /usr/local/airflow/airflow-sync-dags; git pull https://github.com/LvXinPeng/airflow-sync-dags.git ",
