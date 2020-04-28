@@ -22,7 +22,7 @@ dag = DAG(
 
 git_sync_dags = BashOperator(
     task_id='git_sync_dags',
-	bash_command="git pull https://github.com/LvXinPeng/airflow-sync-dags.git; cp /usr/local/airflow/airflow-sync-dags/*.py /usr/local/airflow/dags/",
+	bash_command="cd /usr/local/airflow/airflow-sync-dags; git pull https://github.com/LvXinPeng/airflow-sync-dags.git ",
     dag=dag)
 end = BashOperator(
     task_id='end',
